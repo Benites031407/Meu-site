@@ -1,9 +1,11 @@
-"use client";
+"use client"; // Indica que este componente deve ser renderizado no cliente (não no servidor)
 
 import { useState } from "react";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils"; // Função utilitária para concatenar classes condicionalmente
+import { Button } from "@/components/ui/button"; // Componente de botão estilizado
+
+// Componentes do carrossel
 import {
   Carousel,
   CarouselContent,
@@ -12,68 +14,43 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+// Componente principal da página
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background"> {/* Container principal com altura mínima de tela */}
       <div className="container mx-auto px-4 py-12">
         <h1 className="mb-8 text-center text-4xl font-bold tracking-tight animate-fade-in">
           Minhas Experiências
         </h1>
-        <Slider />
-        <HighlightsCarousel />
+        <Slider /> {/* Componente de carrossel manual */}
+        <HighlightsCarousel /> {/* Componente de carrossel com destaque interativo */}
       </div>
     </main>
   );
 }
 
+// Lista de experiências com título, descrição e imagem
 const highlights = [
-  {
-    id: 1,
-    title: "Fórum FAAP",
-    description: "Participação no Fórum FAAP de debates políticos das Nações Unidas",
-    image: "/assets/faap.jpeg",
-  },
-  {
-    id: 2,
-    title: "Confemack",
-    description: "Fórum da ONU sediado pelo mackenzie.",
-    image: "/assets/confemack2.jpeg",
-  },
-  {
-    id: 3,
-    title: "Macktalent 24",
-    description: "Edição 2024 do MackTalent de apresentações de banda (Livi'n on a prayer).",
-    image: "/assets/macktalent1.jpeg",
-  },
-  {
-    id: 4,
-    title: "Macktalent 25",
-    description: "Edição 2025 do MackTalent de apresentações de banda (Don't stop believi'n).",
-    image: "/assets/macktalent2.jpeg",
-  },
-  {
-    id: 5,
-    title: "OBA",
-    description: "Participação na Olimpíada Brasileira de Astronomia. Foguete detentor do recorde de distância (292 metros).",
-    image: "/assets/oba.jpeg",
-  },
-  {
-    id: 6,
-    title: "Hermes",
-    description: "Projeto Hermes de mecatrônica. Carrinho bluetooth controlado pelo celular.",
-    image: "/assets/hermes.jpeg",
-  },
+  { id: 1, title: "Fórum FAAP", description: "Participação no Fórum FAAP...", image: "/assets/faap.jpeg" },
+  { id: 2, title: "Confemack", description: "Fórum da ONU sediado pelo Mackenzie.", image: "/assets/confemack2.jpeg" },
+  { id: 3, title: "Macktalent 24", description: "Edição 2024 do MackTalent...", image: "/assets/macktalent1.jpeg" },
+  { id: 4, title: "Macktalent 25", description: "Edição 2025 do MackTalent...", image: "/assets/macktalent2.jpeg" },
+  { id: 5, title: "OBA", description: "Participação na Olimpíada Brasileira de Astronomia...", image: "/assets/oba.jpeg" },
+  { id: 6, title: "Hermes", description: "Projeto Hermes de mecatrônica...", image: "/assets/hermes.jpeg" },
 ];
 
+// Carrossel simples com botões "Anterior" e "Próxima"
 function Slider() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0); // Estado para controlar o slide atual
 
+  // Função para ir ao slide anterior
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? highlights.length - 1 : prevIndex - 1
     );
   };
 
+  // Função para ir ao próximo slide
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === highlights.length - 1 ? 0 : prevIndex + 1
@@ -82,6 +59,7 @@ function Slider() {
 
   return (
     <div className="relative mb-12">
+      {/* Imagem principal com gradiente e texto sobreposto */}
       <div className="relative overflow-hidden rounded-xl shadow-lg">
         <Image
           src={highlights[currentIndex].image}
@@ -96,6 +74,8 @@ function Slider() {
           <p className="text-sm">{highlights[currentIndex].description}</p>
         </div>
       </div>
+
+      {/* Botões de navegação */}
       <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
         <Button onClick={handlePrevious} className="bg-primary text-white">
           Anterior
@@ -110,19 +90,21 @@ function Slider() {
   );
 }
 
+// Carrossel interativo com grid de destaques e animações
 function HighlightsCarousel() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0); // Slide ativo
+  const [isAnimating, setIsAnimating] = useState(false); // Controle de animação
 
+  // Função para trocar o slide com efeito
   const handleSlideChange = (index) => {
     setIsAnimating(true);
     setActiveIndex(index);
-    setTimeout(() => setIsAnimating(false), 500);
+    setTimeout(() => setIsAnimating(false), 500); // Tempo da animação
   };
 
   return (
     <div className="space-y-12">
-      {/* Carousel Section */}
+      {/* Carrossel principal com imagens em destaque */}
       <div className="relative overflow-hidden rounded-xl shadow-xl">
         <Carousel className="w-full" onSelect={(index) => handleSlideChange(index)}>
           <CarouselContent>
@@ -149,7 +131,7 @@ function HighlightsCarousel() {
         </Carousel>
       </div>
 
-      {/* Highlights Grid */}
+      {/* Grade com miniaturas das experiências */}
       <div className="grid gap-4 md:grid-cols-4">
         {highlights.map((highlight, index) => (
           <div
@@ -162,6 +144,7 @@ function HighlightsCarousel() {
             )}
             onClick={() => handleSlideChange(index)}
           >
+            {/* Barra indicadora de progresso */}
             <div className="mb-2 h-1.5 w-full overflow-hidden rounded-full bg-muted">
               <div
                 className={cn(
@@ -170,7 +153,10 @@ function HighlightsCarousel() {
                 )}
               />
             </div>
+            {/* Título da experiência */}
             <h3 className="mb-2 font-semibold">{highlight.title}</h3>
+
+            {/* Descrição com animação de opacidade */}
             <div
               className={cn(
                 "transition-opacity duration-500",
@@ -187,7 +173,7 @@ function HighlightsCarousel() {
         ))}
       </div>
 
-      {/* Highlight Details Section */}
+      {/* Seção de detalhes da experiência selecionada */}
       <div className="rounded-xl bg-card p-6 shadow-md animate-fade-in-up">
         <div
           className={cn(

@@ -1,24 +1,34 @@
+// Importação dos componentes de UI utilizados no layout
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Code2, Cpu, Database, Globe, Palette, Sparkles } from "lucide-react"
+import { Code2, Cpu, Database, Globe, Palette, Sparkles } from "lucide-react" // Ícones
 
+// Componente principal da página de habilidades
 export default function AbilitiesPage() {
   return (
+    // Container centralizado com padding e largura máxima
     <div className="container mx-auto px-4 py-12 max-w-6xl">
+      
+      {/* Título da seção */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold tracking-tight mb-4">Minhas habilidades</h1>
       </div>
 
+      {/* Componente de abas para categorizar as habilidades */}
       <Tabs defaultValue="technical" className="w-full">
+
+        {/* Lista de abas (Hard Skills, Soft Skills, Idiomas) */}
         <TabsList className="grid w-full grid-cols-3 mb-8">
           <TabsTrigger value="technical">Hard Skills</TabsTrigger>
           <TabsTrigger value="soft">Soft Skills</TabsTrigger>
           <TabsTrigger value="languages">Idiomas</TabsTrigger>
         </TabsList>
 
+        {/* Conteúdo da aba "Hard Skills" */}
         <TabsContent value="technical" className="space-y-8">
           <div className="grid gap-8 md:grid-cols-2">
+            {/* Cartões de habilidades técnicas divididas por áreas */}
             <SkillCard
               title="Desenvolvimento Frontend"
               icon={<Palette className="h-6 w-6" />}
@@ -29,7 +39,6 @@ export default function AbilitiesPage() {
                 { name: "Tailwind CSS", level: 55 },
               ]}
             />
-
             <SkillCard
               title="Desenvolvimento Backend"
               icon={<Database className="h-6 w-6" />}
@@ -40,7 +49,6 @@ export default function AbilitiesPage() {
                 { name: "Django", level: 65 },
               ]}
             />
-
             <SkillCard
               title="Desenvolvimento Web"
               icon={<Globe className="h-6 w-6" />}
@@ -51,7 +59,6 @@ export default function AbilitiesPage() {
                 { name: "REST APIs", level: 20 },
               ]}
             />
-
             <SkillCard
               title="Outras Tecnologias"
               icon={<Cpu className="h-6 w-6" />}
@@ -65,8 +72,10 @@ export default function AbilitiesPage() {
           </div>
         </TabsContent>
 
+        {/* Conteúdo da aba "Soft Skills" */}
         <TabsContent value="soft" className="space-y-6">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {/* Cartões individuais para cada soft skill */}
             <SoftSkillCard
               title="Problem Solving"
               description="Pensamento crítico e creativo, voltado para resolver problemas complexos."
@@ -95,8 +104,10 @@ export default function AbilitiesPage() {
           </div>
         </TabsContent>
 
+        {/* Conteúdo da aba "Idiomas" */}
         <TabsContent value="languages" className="space-y-8">
           <div className="grid gap-8 md:grid-cols-2">
+            {/* Cartão com linguagens de programação */}
             <LanguageCard
               title="Linguagens de Programação"
               icon={<Code2 className="h-6 w-6" />}
@@ -112,6 +123,7 @@ export default function AbilitiesPage() {
               ]}
             />
 
+            {/* Cartão com idiomas falados */}
             <LanguageCard
               title="Idiomas"
               icon={<Sparkles className="h-6 w-6" />}
@@ -128,13 +140,17 @@ export default function AbilitiesPage() {
   )
 }
 
+// Componente de cartão de habilidade técnica
 function SkillCard({ title, icon, skills }) {
   return (
     <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
+      {/* Título do cartão com ícone */}
       <div className="flex items-center gap-2 mb-4">
         {icon}
         <h3 className="text-xl font-semibold">{title}</h3>
       </div>
+
+      {/* Lista de habilidades com barra de progresso */}
       <div className="space-y-4">
         {skills.map((skill) => (
           <div key={skill.name} className="space-y-2">
@@ -150,11 +166,13 @@ function SkillCard({ title, icon, skills }) {
   )
 }
 
+// Componente de cartão de habilidade interpessoal (soft skill)
 function SoftSkillCard({ title, description, tags }) {
   return (
     <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
       <h3 className="text-lg font-semibold mb-2">{title}</h3>
       <p className="text-muted-foreground text-sm mb-4">{description}</p>
+      {/* Lista de tags que descrevem a habilidade */}
       <div className="flex flex-wrap gap-2">
         {tags.map((tag) => (
           <Badge key={tag} variant="secondary">
@@ -166,22 +184,27 @@ function SoftSkillCard({ title, description, tags }) {
   )
 }
 
+// Componente de cartão de idiomas (tanto programação quanto idiomas falados)
 function LanguageCard({ title, icon, languages }) {
   return (
     <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
+      {/* Cabeçalho com ícone e título */}
       <div className="flex items-center gap-2 mb-4">
         {icon}
         <h3 className="text-xl font-semibold">{title}</h3>
       </div>
+
+      {/* Lista de linguagens com nível de proficiência */}
       <div className="space-y-4">
         {languages.map((language) => (
           <div key={language.name} className="flex justify-between items-center py-2 border-b last:border-0">
             <span className="font-medium">{language.name}</span>
+            {/* Cor do badge muda conforme o nível */}
             <Badge
               variant={
-                language.level === "Advanced" || language.level === "Native"
+                language.level === "Advanced" || language.level === "Nativo"
                   ? "default"
-                  : language.level === "Intermediate" || language.level === "Fluent"
+                  : language.level === "Intermediário" || language.level === "Fluente"
                     ? "secondary"
                     : "outline"
               }
@@ -194,4 +217,3 @@ function LanguageCard({ title, icon, languages }) {
     </div>
   )
 }
-

@@ -23,23 +23,33 @@ export default class Carousal extends Component {
       
 
         <Slider {...settings}>
-          <div className="w-full">
-          <img className="w-full " src="assets/c1.jpeg" alt="carousal" />
+         <div className="w-full h-[400px] md:h-[500px] lg:h-[700px] overflow-hidden">
+            <img
+              className="w-full h-full object-cover"
+              src="assets/laura.jpeg"
+              alt="carousal"
+            />
           </div>
-          <div>
-          <img className="w-full " src="assets/c2.jpeg" alt="carousal" />
+          <div className="w-full h-[400px] md:h-[500px] lg:h-[700px] overflow-hidden">
+            <img
+              className="w-full h-full object-cover"
+              src="assets/fusca.png"
+              alt="carousal"
+            />
           </div>
-          <div>
-          <img className="w-full " src="assets/c3.jpeg" alt="carousal" />
+          <div className="w-full h-[400px] md:h-[500px] lg:h-[700px] overflow-hidden">
+            <img
+              className="w-full h-full object-cover"
+              src="assets/pais.jpeg"
+              alt="carousal"
+            />
           </div>
-          <div>
-          <img className="w-full " src="assets/c4.jpeg" alt="carousal" />
-          </div>
-          <div>
-          <img className="w-full " src="assets/c5.jpeg" alt="carousal" />
-          </div>
-          <div>
-          <img className="w-full " src="assets/c6.jpeg" alt="carousal" />
+          <div className="w-full h-[400px] md:h-[500px] lg:h-[700px] overflow-hidden">
+            <img
+              className="w-full h-full object-cover"
+              src="assets/maxpequeno.jpeg"
+              alt="carousal"
+            />
           </div>
         </Slider>
       </div>

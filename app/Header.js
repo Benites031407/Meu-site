@@ -10,37 +10,26 @@ const Header = () => {
         <div className="container mx-auto flex justify-between lg:gap-5 font-thin text-sm items-center flex-wrap">
            
                 <Link href='/'>
-                  <img src="./assets/icon.svg" alt="icons" />
+                  <img src="./assets/porsche.svg" alt="icons" />
                 </Link>
          
-        
-                <Link href='/store'>Store
+                <Link href='/'>Home
                 </Link>
-                <Link href='/about'>Mac
+                <Link href='/about'>Sobre
                 </Link>
-                <Link href='/about'>Ipad
+                <Link href='/projects'>Projetos
                 </Link>
-                <Link href='/about'>Iphone
+                <Link href='/highlights'>Destaques
                 </Link>
-                <Link href='/about'>Watch
+                <Link href='/habilities'>Habilidades
                 </Link>
-                <Link href='/about'>AirPods
+                <Link href='/curriculo'>Currículo
                 </Link>
-                <Link href='/about'>Tv & Home
+                <Link href='/contact'>Contato
                 </Link>
-                <Link href='/about'>Entertainment
-                </Link>
-                <Link href='/about'>Accessories
-                </Link>
-                <Link href='/about'>Support
-                </Link>
-                <Link href='/about'>
+                <Link href='/projects'>
                   <BiSearch className='text-lg'/>
                 </Link>
-                <Link href='/about'>
-                  <HiOutlineShoppingBag  className='text-lg'/>
-                </Link>
-            
         </div>
     </header>
   )

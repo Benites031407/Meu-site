@@ -6,11 +6,12 @@ const Footer = () => {
         <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
         <div className="md:max-w-md lg:col-span-2 flex items-center">
-         <img className='w-20 flex-shrink-0' src="assets/icon.svg" alt="" />
+         <img className='w-20 flex-shrink-0 mr-8' src="assets/porsche.svg" alt="" />
          
             <p className="text-sm text-gray-800">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam.
+            "Você está preocupado demais com o que foi e o que será.
+            Há um ditado: O ontem é história, o amanhã é um mistério, mas o hoje é uma dádiva. 
+            <br />Por isso é chamado de presente. <br />(Mestre Oogway, 2008)" 
             </p>
           
       
@@ -18,169 +19,100 @@ const Footer = () => {
         <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
           <div>
             <p className="font-semibold tracking-wide text-gray-800">
-              Category
+             Projetos
             </p>
             <ul className="mt-2 space-y-2">
               <li>
                 <a
-                  href="/"
+                  href="/projects"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  News
+                  Sites
                 </a>
               </li>
               <li>
                 <a
-                  href="/"
+                  href="/projects"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  World
+                  Apps
                 </a>
               </li>
               <li>
                 <a
-                  href="/"
+                  href="/projects"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  Games
+                  Mecatrônica
                 </a>
               </li>
               <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  References
-                </a>
+              </li>
+              <li>
               </li>
             </ul>
           </div>
           <div>
-            <p className="font-semibold tracking-wide text-gray-800">
-              Business
-            </p>
+            <p className="font-semibold tracking-wide text-gray-800">Experiências</p>
             <ul className="mt-2 space-y-2">
               <li>
                 <a
-                  href="/"
+                  href="/projects"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  Web
+                  Profissionais
                 </a>
               </li>
               <li>
                 <a
-                  href="/"
+                  href="/highlights"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  eCommerce
+                  Fóruns
                 </a>
               </li>
               <li>
                 <a
-                  href="/"
+                  href="/highlights"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  Business
+                  Música
                 </a>
               </li>
               <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Entertainment
-                </a>
               </li>
               <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Portfolio
-                </a>
               </li>
             </ul>
           </div>
           <div>
-            <p className="font-semibold tracking-wide text-gray-800">Apples</p>
+            <p className="font-semibold tracking-wide text-gray-800">Sobre mim</p>
             <ul className="mt-2 space-y-2">
               <li>
                 <a
-                  href="/"
+                  href="/contact"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  Media
+                  Contato
                 </a>
               </li>
               <li>
                 <a
-                  href="/"
+                  href="/curriculo"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  Brochure
+                  Currículo
                 </a>
               </li>
               <li>
                 <a
-                  href="/"
+                  href="/highlights"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
-                  Nonprofit
+                  Vida
                 </a>
               </li>
               <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Educational
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Projects
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p className="font-semibold tracking-wide text-gray-800">Cherry</p>
-            <ul className="mt-2 space-y-2">
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Infopreneur
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Personal
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Wiki
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  Forum
-                </a>
               </li>
             </ul>
           </div>
@@ -188,19 +120,32 @@ const Footer = () => {
       </div>
       <div className="flex flex-col justify-between pt-5 pb-10 border-t sm:flex-row">
         <p className="text-sm text-gray-600">
-          © Copyright 2020 Lorem Inc. All rights reserved.
+          © Copyright 2025 Pirotinha Ltda. Todos os direitos reservados.
         </p>
-        <div className="flex items-center mt-4 space-x-4 sm:mt-0">
-          <a
-            href="/"
-            className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+
+      <div className="flex items-center mt-4 space-x-4 sm:mt-0">
+        <a
+          href="https://www.linkedin.com/in/pedro-benites-30383524b/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="h-5"
           >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
-              <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
-            </svg>
-          </a>
+            <path d="M19 0h-14c-2.8 0-5 2.2-5 5v14c0 2.8 2.2 5 5 5h14c2.8 
+            0 5-2.2 5-5v-14c0-2.8-2.2-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.3c-1 
+            0-1.7-.8-1.7-1.7s.8-1.7 1.7-1.7c1 0 1.7.8 1.7 
+            1.7s-.8 1.7-1.7 1.7zm13.5 11.3h-3v-5.6c0-1.3-.5-2.1-1.6-2.1-0.9 
+            0-1.3.6-1.5 1.2-.1.2-.1.5-.1.8v5.6h-3v-10h3v1.4c.4-.7 1.2-1.6 
+            2.8-1.6 2 0 3.4 1.3 3.4 4.1v6.1z" />
+          </svg>
+        </a>
           <a
-            href="/"
+            href="https://www.instagram.com/_benitespedro/"
             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
           >
             <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
@@ -209,12 +154,19 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            href="/"
-            className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+           href="https://github.com/Benites031407"
+           target="_blank"
+           rel="noopener noreferrer"
+          className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
           >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
-              <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
-            </svg>
+          <svg
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="h-5"
+          xmlns="http://www.w3.org/2000/svg"
+          >
+         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.26.793-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.3-5.466-1.332-5.466-5.932 0-1.31.47-2.38 1.235-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.48 11.48 0 0 1 3.003-.404c1.02.005 2.047.137 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.803 5.628-5.475 5.922.43.372.823 1.103.823 2.222 0 1.604-.015 2.897-.015 3.293 0 .32.192.694.8.576C20.565 21.796 24 17.296 24 12c0-6.63-5.37-12-12-12z"/>
+           </svg>
           </a>
         </div>
       </div>
